@@ -1,9 +1,0 @@
-services:
-  whm:
-    image: node:20
-    working_dir: /app
-    command: sh -c "rm -rf node_modules package-lock.json && npm cache clean --force && npm install && node app.js"
-    ports:
-      - "3021:3000"
-    environment:
-      PORT: 3000
