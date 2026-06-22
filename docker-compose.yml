@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  whm:
+    build: .
+    container_name: whm
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
