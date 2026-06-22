@@ -2,9 +2,7 @@ services:
   whm:
     image: node:20
     working_dir: /app
-    volumes:
-      - .:/app
-    command: sh -c "npm install --no-audit --no-fund && node app.js"
+    command: sh -c "rm -rf node_modules package-lock.json && npm cache clean --force && npm install && node app.js"
     ports:
       - "3021:3000"
     environment:
