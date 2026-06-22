@@ -1,10 +1,7 @@
 services:
   whm:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    restart: unless-stopped
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm start"
     ports:
       - "3000:3000"
-    environment:
-      PORT: 3000
