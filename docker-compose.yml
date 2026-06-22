@@ -1,7 +1,7 @@
 services:
   whm:
     image: node:20-alpine
-    working_dir: /app
+    working_dir: /
     command: sh -c "npm install && npm start"
     ports:
-      - "3000:3000"
+      - "3021:3021"
