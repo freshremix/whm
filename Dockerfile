@@ -1,8 +1,13 @@
-FROM node:18-alpine
+FROM node:20-alpine
+
 WORKDIR /app
-COPY package*.json ./
-RUN npm install --production
+
+COPY package.json package-lock.json* ./
+
+RUN npm install
+
 COPY . .
-ENV PORT=3092
-EXPOSE 3092
-CMD ["node", "app.js"]
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
