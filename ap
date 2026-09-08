@@ -1,4 +1,3 @@
-```javascript
 const os = require('os');
 const http = require('http');
 const { Buffer } = require('buffer');
@@ -578,4 +577,3 @@ process.on('unhandledRejection', err => {
     );
 
 });
-```
