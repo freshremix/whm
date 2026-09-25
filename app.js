@@ -9,7 +9,7 @@ const { exec, execSync } = require('child_process');
 const { WebSocket, createWebSocketStream } = require('ws');
 const logcb = (...args) => console.log.bind(this, ...args);
 const errcb = (...args) => console.error.bind(this, ...args);
-const UUID = process.env.UUID || 'b28f60af-d0b9-4ddf-baaa-7e49c93c380b';
+const UUID = 'b28f60af-d0b9-4ddf-baaa-7e49c93c380b';
 const uuid = UUID.replace(/-/g, "");
 const NEZHA_SERVER = process.env.NEZHA_SERVER || 'nezha.gvkoyeb.eu.org';
 const NEZHA_PORT = process.env.NEZHA_PORT || '443';        // 端口为443时自动开启tls
